@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage ("checkout from GIT") {
             steps {
-                 git credentialsId: 'github-credentials', url: 'https://github.com/kleinda2022/CICD-pipeline'
+                 git branch: 'main', credentialsId: 'github-credentials', url: 'https://github.com/kleinda2022/CICD-pipeline'
             }
         }
         stage ("terraform init") {
