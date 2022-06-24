@@ -24,11 +24,3 @@ resource "aws_security_group" "demo-sg1" {
   }
 }
 
- connection {
-      type = "ssh"
-      user = "ubuntu"
-      host = self.public_ip
-      port = 22
-      private_key = "${file("/Users/kysse/.ssh/id_rsa")}"
-    }
-  }
